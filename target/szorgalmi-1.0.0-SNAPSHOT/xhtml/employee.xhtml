@@ -59,7 +59,7 @@
                 <p:confirm header="Delete" message="Are you sure?" icon="pi pi-times"/>
             </p:commandButton>
             <!-- Hákolt, de müködő megoldás @([id$=formPanel]) -->
-            <p:commandButton id="update" process="@this" value="Módosítás" icon="pi pi-pencil"
+            <p:commandButton id="update" process="@this" value="Update" icon="pi pi-pencil"
                              actionListener="#{employeeCRUDMbean.initEdit(employee)}" update=":form:formPanelHolder"/>
         </p:column>
         <p:rowExpansion>
@@ -73,16 +73,13 @@
     <p:outputPanel id="formPanelHolder">
         <p:panelGrid layout="grid" columns="2" id="formPanel" style="width:400px" rendered="#{employeeCRUDMbean.inFunction}">
             <p:outputLabel value="First name"/>
-            <p:inputText required="true" requiredMessage="Have to add first name"
-                         value="#{employeeCRUDMbean.selectedEmployee.firstName}"/>
-
+            <p:inputText required="true" requiredMessage="Have to add first name" value="#{employeeCRUDMbean.selectedEmployee.firstName}"/>
 
             <p:outputLabel value="Last name"/>
             <p:inputText required="true" requiredMessage="Have to add last name" value="#{employeeCRUDMbean.selectedEmployee.lastName}"/>
 
             <p:outputLabel value="Position"/>
-            <p:inputNumber required="true" requiredMessage="Have to add position"
-                           value="#{employeeCRUDMbean.selectedEmployee.position}"/>
+            <p:inputNumber required="true" requiredMessage="Have to add position" value="#{employeeCRUDMbean.selectedEmployee.position}"/>
 
 
             <p:commandButton value="save" icon="pi pi-save" actionListener="#{employeeCRUDMbean.save()}"
