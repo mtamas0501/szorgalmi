@@ -79,8 +79,7 @@
             <p:inputText required="true" requiredMessage="Have to add last name" value="#{employeeCRUDMbean.selectedEmployee.lastName}"/>
 
             <p:outputLabel value="Position"/>
-            <p:inputNumber required="true" requiredMessage="Have to add position" value="#{employeeCRUDMbean.selectedEmployee.position}"/>
-
+            <p:inputText required="true" requiredMessage="Have to add position" value="#{employeeCRUDMbean.selectedEmployee.position}"/>
 
             <p:commandButton value="save" icon="pi pi-save" actionListener="#{employeeCRUDMbean.save()}"
                              process="formPanel" update="@form">

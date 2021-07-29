@@ -82,15 +82,15 @@
             <p:outputLabel value="Settlement"/>
             <p:inputText required="true" requiredMessage="Have to add settlement" value="#{adressCRUDMbean.selectedAdress.settlement}"/>
 
-            <p:outputLabel value="Public Space"/>
-            <p:inputNumber required="true" requiredMessage="Have to add public space" value="#{adressCRUDMbean.selectedAdress.publicSpace}"/>
+            <p:outputLabel value="PublicSpace"/>
+            <p:inputText required="true" requiredMessage="Have to add public space" value="#{adressCRUDMbean.selectedAdress.publicSpace}"/>
 
             <p:outputLabel value="Adress number"/>
             <p:inputNumber required="true" requiredMessage="Have to add adress number" thousandSeparator="" decimalPlaces="0"
                            value="#{adressCRUDMbean.selectedAdress.addressNumber}"/>
 
 
-            <p:commandButton value="save" icon="pi pi-save" actionListener="#{employeeCRUDMbean.save()}"
+            <p:commandButton value="save" icon="pi pi-save" actionListener="#{adressCRUDMbean.save()}"
                              process="formPanel" update="@form">
             </p:commandButton>
         </p:panelGrid>
